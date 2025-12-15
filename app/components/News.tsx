@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import AnimatedSection from "./AnimatedSection";
 import Card3D from "./Card3D";
+import ParallaxSection from "./ParallaxSection";
+import ScrollReveal from "./ScrollReveal";
 
 // ニュースデータの型定義
 interface NewsItem {
@@ -53,26 +54,34 @@ export default function News() {
       {/* Semi-transparent background layer */}
       <div className="absolute inset-0 bg-white" />
 
-      {/* Background decorative text */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none z-[1]">
+      {/* Background decorative text with parallax */}
+      <ParallaxSection
+        speed={-0.2}
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none z-[1]"
+      >
         <p className="text-[180px] md:text-[280px] font-light italic text-zinc-100 whitespace-nowrap tracking-wider">
           The latest Information
         </p>
-      </div>
+      </ParallaxSection>
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
-        <AnimatedSection className="mb-16 text-center">
+        <ScrollReveal animation="zoom-in" className="mb-16 text-center">
           <p className="text-sm tracking-[0.3em] text-zinc-400 mb-3">ニュース</p>
           <h2 className="text-4xl md:text-5xl font-bold text-zinc-800 tracking-wide">
             NEWS
           </h2>
-        </AnimatedSection>
+        </ScrollReveal>
 
         {/* News Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {newsData.map((news, index) => (
-            <AnimatedSection key={news.id} delay={index * 100}>
+            <ScrollReveal
+              key={news.id}
+              animation="bounce"
+              delay={index * 100}
+              duration={700}
+            >
               <Card3D glowColor="rgba(239, 68, 68, 0.2)">
                 <Link href={news.href} className="group block h-full">
                   <article className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 h-full flex flex-col border border-zinc-100">
@@ -88,7 +97,7 @@ export default function News() {
                       ) : (
                         <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-zinc-100 to-zinc-200 group-hover:from-zinc-50 group-hover:to-zinc-150 transition-colors duration-300">
                           <svg
-                            className="w-12 h-12 text-zinc-300 group-hover:text-zinc-400 transition-colors duration-300"
+                            className="w-12 h-12 text-zinc-300 group-hover:text-zinc-400 group-hover:scale-110 transition-all duration-300"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -114,7 +123,7 @@ export default function News() {
                         >
                           {news.date}
                         </time>
-                        <span className="px-2 py-0.5 text-xs font-medium text-white bg-red-500 rounded">
+                        <span className="px-2 py-0.5 text-xs font-medium text-white bg-red-500 rounded group-hover:bg-red-600 transition-colors">
                           {news.category}
                         </span>
                       </div>
@@ -127,15 +136,15 @@ export default function News() {
                   </article>
                 </Link>
               </Card3D>
-            </AnimatedSection>
+            </ScrollReveal>
           ))}
         </div>
 
         {/* View All Button */}
-        <AnimatedSection className="mt-14 text-center" delay={400}>
+        <ScrollReveal animation="slide-up" className="mt-14 text-center" delay={400}>
           <Link
             href="/news"
-            className="inline-flex items-center gap-3 px-10 py-4 bg-red-500 text-white rounded-full font-medium hover:bg-red-600 hover:scale-105 hover:shadow-lg hover:shadow-red-500/25 transition-all duration-300"
+            className="group inline-flex items-center gap-3 px-10 py-4 bg-red-500 text-white rounded-full font-medium hover:bg-red-600 hover:scale-105 hover:shadow-lg hover:shadow-red-500/25 transition-all duration-300"
           >
             ニュース一覧
             <svg
@@ -152,7 +161,7 @@ export default function News() {
               />
             </svg>
           </Link>
-        </AnimatedSection>
+        </ScrollReveal>
       </div>
     </section>
   );

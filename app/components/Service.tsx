@@ -1,17 +1,26 @@
 "use client";
 
-import AnimatedSection from "./AnimatedSection";
 import Card3D from "./Card3D";
+import ParallaxSection from "./ParallaxSection";
+import ScrollReveal from "./ScrollReveal";
 
 export default function Service() {
   return (
-    <section className="py-24 px-6 relative">
+    <section className="py-24 px-6 relative overflow-hidden">
       {/* Semi-transparent background layer */}
       <div className="absolute inset-0 bg-white" />
 
+      {/* Decorative floating shapes */}
+      <ParallaxSection speed={0.3} className="absolute top-40 right-20 w-48 h-48 opacity-10 pointer-events-none">
+        <div className="w-full h-full bg-gradient-to-br from-pink-500 to-red-500 rounded-full blur-3xl" />
+      </ParallaxSection>
+      <ParallaxSection speed={-0.4} className="absolute bottom-40 left-20 w-64 h-64 opacity-10 pointer-events-none">
+        <div className="w-full h-full bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full blur-3xl" />
+      </ParallaxSection>
+
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
-        <AnimatedSection className="mb-6">
+        <ScrollReveal animation="blur" className="mb-6">
           <h2 className="text-4xl md:text-5xl font-bold text-zinc-800 mb-4">
             サービス
           </h2>
@@ -20,17 +29,17 @@ export default function Service() {
             <br />
             を提供しております。お気軽にお問い合わせください。
           </p>
-        </AnimatedSection>
+        </ScrollReveal>
 
         {/* Decorative dot */}
-        <AnimatedSection delay={100} className="flex justify-center mb-8">
+        <ScrollReveal animation="zoom-in" delay={100} className="flex justify-center mb-8">
           <div className="w-2 h-2 bg-zinc-400 rounded-full" />
-        </AnimatedSection>
+        </ScrollReveal>
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Marketing Support */}
-          <AnimatedSection delay={200} direction="left">
+          <ScrollReveal animation="slide-right" delay={200} duration={700}>
             <Card3D glowColor="rgba(236, 72, 153, 0.3)">
               <div className="bg-zinc-200/80 rounded-2xl p-6 min-h-[280px] group/card hover:bg-zinc-100 transition-colors duration-300">
                 <h3 className="text-xl font-bold text-zinc-800 mb-2 group-hover/card:text-transparent group-hover/card:bg-clip-text group-hover/card:bg-gradient-to-r group-hover/card:from-pink-500 group-hover/card:to-purple-500 transition-all duration-300">
@@ -84,10 +93,10 @@ export default function Service() {
                 </div>
               </div>
             </Card3D>
-          </AnimatedSection>
+          </ScrollReveal>
 
           {/* Web Development */}
-          <AnimatedSection delay={300} direction="right">
+          <ScrollReveal animation="slide-left" delay={300} duration={700}>
             <Card3D glowColor="rgba(6, 182, 212, 0.3)">
               <div className="bg-white rounded-2xl p-6 min-h-[280px] shadow-sm group/card hover:shadow-lg transition-shadow duration-300">
                 <h3 className="text-xl font-bold text-zinc-800 mb-2 group-hover/card:text-transparent group-hover/card:bg-clip-text group-hover/card:bg-gradient-to-r group-hover/card:from-cyan-500 group-hover/card:to-blue-500 transition-all duration-300">
@@ -163,10 +172,10 @@ export default function Service() {
                 </div>
               </div>
             </Card3D>
-          </AnimatedSection>
+          </ScrollReveal>
 
           {/* Advisory & Strategy */}
-          <AnimatedSection delay={400} direction="left">
+          <ScrollReveal animation="flip-up" delay={400} duration={700}>
             <Card3D glowColor="rgba(251, 191, 36, 0.3)">
               <div className="bg-zinc-200/80 rounded-2xl p-6 min-h-[280px] group/card hover:bg-zinc-100 transition-colors duration-300">
                 <h3 className="text-xl font-bold text-zinc-800 mb-2 group-hover/card:text-transparent group-hover/card:bg-clip-text group-hover/card:bg-gradient-to-r group-hover/card:from-amber-500 group-hover/card:to-red-500 transition-all duration-300">
@@ -222,10 +231,10 @@ export default function Service() {
                 </div>
               </div>
             </Card3D>
-          </AnimatedSection>
+          </ScrollReveal>
 
           {/* Accelerator */}
-          <AnimatedSection delay={500} direction="right">
+          <ScrollReveal animation="flip-up" delay={500} duration={700}>
             <Card3D glowColor="rgba(239, 68, 68, 0.3)">
               <div className="bg-white rounded-2xl p-6 min-h-[280px] shadow-sm group/card hover:shadow-lg transition-shadow duration-300">
                 <h3 className="text-xl font-bold text-zinc-800 mb-2 group-hover/card:text-transparent group-hover/card:bg-clip-text group-hover/card:bg-gradient-to-r group-hover/card:from-amber-500 group-hover/card:to-red-500 transition-all duration-300">
@@ -273,7 +282,7 @@ export default function Service() {
                 </div>
               </div>
             </Card3D>
-          </AnimatedSection>
+          </ScrollReveal>
         </div>
       </div>
     </section>
