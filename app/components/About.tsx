@@ -1,5 +1,7 @@
 "use client";
 
+import AnimatedSection from "./AnimatedSection";
+
 // Aboutカードデータの型定義
 interface AboutCard {
   id: string;
@@ -41,68 +43,78 @@ export default function About() {
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
-        <div className="mb-16 text-center">
+        <AnimatedSection className="mb-16 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-zinc-800">
             私たちについて
           </h2>
-        </div>
+        </AnimatedSection>
 
         {/* Parallelogram Container */}
-        <div className="relative">
-          {/* Main parallelogram shape */}
-          <div
-            className="bg-zinc-900 overflow-hidden"
-            style={{
-              clipPath: "polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%)",
-            }}
-          >
-            {/* 3-column grid inside */}
-            <div className="grid grid-cols-1 md:grid-cols-3">
-              {aboutCards.map((card, index) => (
-                <div
-                  key={card.id}
-                  className={`p-8 md:py-12 md:px-14 text-white relative ${
-                    index === 0 ? "md:pl-20" : ""
-                  } ${
-                    index === aboutCards.length - 1 ? "md:pr-20" : ""
-                  } ${
-                    index < aboutCards.length - 1
-                      ? "md:border-r md:border-zinc-700"
-                      : ""
-                  }`}
-                >
-                  {/* Number */}
-                  <div className="mb-6">
-                    <span className="text-5xl md:text-6xl font-bold text-zinc-700">
-                      {card.number}
-                    </span>
+        <AnimatedSection delay={200}>
+          <div className="relative group">
+            {/* Neon glow effect on hover */}
+            <div
+              className="absolute -inset-1 bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-500"
+              style={{
+                clipPath: "polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%)",
+              }}
+            />
+
+            {/* Main parallelogram shape */}
+            <div
+              className="bg-zinc-900 overflow-hidden relative"
+              style={{
+                clipPath: "polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%)",
+              }}
+            >
+              {/* 3-column grid inside */}
+              <div className="grid grid-cols-1 md:grid-cols-3">
+                {aboutCards.map((card, index) => (
+                  <div
+                    key={card.id}
+                    className={`p-8 md:py-12 md:px-14 text-white relative group/card hover:bg-zinc-800/50 transition-colors duration-300 ${
+                      index === 0 ? "md:pl-20" : ""
+                    } ${
+                      index === aboutCards.length - 1 ? "md:pr-20" : ""
+                    } ${
+                      index < aboutCards.length - 1
+                        ? "md:border-r md:border-zinc-700"
+                        : ""
+                    }`}
+                  >
+                    {/* Number with gradient on hover */}
+                    <div className="mb-6">
+                      <span className="text-5xl md:text-6xl font-bold text-zinc-700 group-hover/card:text-transparent group-hover/card:bg-clip-text group-hover/card:bg-gradient-to-r group-hover/card:from-pink-500 group-hover/card:to-cyan-500 transition-all duration-300">
+                        {card.number}
+                      </span>
+                    </div>
+
+                    {/* Title */}
+                    <h3 className="text-xl md:text-2xl font-bold mb-4 leading-tight group-hover/card:text-white transition-colors">
+                      {card.title}
+                    </h3>
+
+                    {/* Description */}
+                    <p className="text-sm text-zinc-400 leading-relaxed group-hover/card:text-zinc-300 transition-colors">
+                      {card.description}
+                    </p>
+
+                    {/* Decorative line */}
+                    <div className="absolute bottom-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-zinc-700 to-transparent md:hidden" />
                   </div>
-
-                  {/* Title */}
-                  <h3 className="text-xl md:text-2xl font-bold mb-4 leading-tight">
-                    {card.title}
-                  </h3>
-
-                  {/* Description */}
-                  <p className="text-sm text-zinc-400 leading-relaxed">
-                    {card.description}
-                  </p>
-
-                  {/* Decorative line */}
-                  <div className="absolute bottom-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-zinc-700 to-transparent md:hidden" />
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
 
-          {/* Decorative accent lines */}
-          <div
-            className="absolute -top-2 left-0 right-0 h-1 bg-gradient-to-r from-red-500 via-amber-500 to-lime-500"
-            style={{
-              clipPath: "polygon(5% 0%, 100% 0%, 99.8% 100%, 4.8% 100%)",
-            }}
-          />
-        </div>
+            {/* Decorative accent lines */}
+            <div
+              className="absolute -top-2 left-0 right-0 h-1 bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500"
+              style={{
+                clipPath: "polygon(5% 0%, 100% 0%, 99.8% 100%, 4.8% 100%)",
+              }}
+            />
+          </div>
+        </AnimatedSection>
       </div>
     </section>
   );
