@@ -192,7 +192,7 @@ function getGraphic(type: string) {
 
 export default function Marketing() {
   return (
-    <section className="py-24 px-6 relative overflow-hidden">
+    <section className="py-24 relative overflow-hidden">
       {/* Dark background */}
       <div className="absolute inset-0 bg-zinc-900" />
 
@@ -223,9 +223,9 @@ export default function Marketing() {
         </p>
       </ParallaxSection>
 
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="relative z-10">
         {/* Section Header */}
-        <ScrollReveal animation="blur" className="mb-12 text-center">
+        <ScrollReveal animation="blur" className="mb-12 text-center px-6">
           <p className="text-sm tracking-[0.3em] text-zinc-400 mb-3">
             マーケティング支援
           </p>
@@ -234,13 +234,15 @@ export default function Marketing() {
           </h2>
         </ScrollReveal>
 
-        {/* Carousel */}
+        {/* Carousel - Full width */}
         <ScrollReveal animation="slide-up" delay={200}>
           <HorizontalCarousel
             itemWidth={320}
             gap={24}
             showDots={true}
             showArrows={true}
+            fullWidth={true}
+            infinite={true}
           >
             {marketingServices.map((service) => (
               <div
@@ -317,7 +319,7 @@ export default function Marketing() {
         </ScrollReveal>
 
         {/* Service count indicator */}
-        <ScrollReveal animation="fade" delay={400} className="mt-8 text-center">
+        <ScrollReveal animation="fade" delay={400} className="mt-8 text-center px-6">
           <p className="text-sm text-zinc-500">
             <span className="text-white font-medium">{marketingServices.length}</span>{" "}
             services available
