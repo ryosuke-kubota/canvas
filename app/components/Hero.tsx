@@ -30,19 +30,19 @@ export default function Hero() {
     // Animate white brush stroke
     const animateWhiteBrush = () => {
       const centerY = height / 2;
-      const strokeHeight = Math.min(200, height * 0.25);
+      const strokeHeight = Math.min(320, height * 0.4);
       const startX = -100;
       const endX = width + 100;
       const duration = 800;
       const startTime = performance.now();
 
       // Pre-generate bristle properties (fixed values to prevent flickering)
-      const bristleCount = 80;
+      const bristleCount = 120;
       const bristles = Array.from({ length: bristleCount }, (_, i) => ({
         y: -strokeHeight / 2 + (i / bristleCount) * strokeHeight,
-        thickness: 1.5 + (Math.sin(i * 0.7) * 0.5 + 0.5) * 2.5,
-        yOffset: Math.sin(i * 0.4) * 4,
-        alpha: 0.6 + (Math.cos(i * 0.5) * 0.5 + 0.5) * 0.4,
+        thickness: 3 + (Math.sin(i * 0.7) * 0.5 + 0.5) * 5,
+        yOffset: Math.sin(i * 0.4) * 6,
+        alpha: 0.7 + (Math.cos(i * 0.5) * 0.5 + 0.5) * 0.3,
         phase: i * 0.3,
       }));
 
