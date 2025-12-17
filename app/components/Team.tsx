@@ -17,53 +17,34 @@ const teamMembers: TeamMember[] = [
   {
     id: "1",
     name: "watacchi",
-    avatar: "/team/avatar-1.png",
+    avatar: "https://api.dicebear.com/7.x/pixel-art/svg?seed=watacchi&backgroundColor=f472b6,c084fc",
     twitter: "https://twitter.com/",
   },
   {
     id: "2",
     name: "Dr.Pudding",
-    avatar: "/team/avatar-2.png",
+    avatar: "https://api.dicebear.com/7.x/pixel-art/svg?seed=pudding&backgroundColor=22d3ee,3b82f6",
     twitter: "https://twitter.com/",
   },
   {
     id: "3",
     name: "moto GA",
-    avatar: "/team/avatar-3.png",
+    avatar: "https://api.dicebear.com/7.x/pixel-art/svg?seed=motoga&backgroundColor=facc15,f97316",
     twitter: "https://twitter.com/",
   },
   {
     id: "4",
     name: "CryptoBaby",
-    avatar: "/team/avatar-4.png",
+    avatar: "https://api.dicebear.com/7.x/pixel-art/svg?seed=crypto&backgroundColor=4ade80,14b8a6",
     twitter: "https://twitter.com/",
   },
   {
     id: "5",
     name: "shiroiro",
-    avatar: "/team/avatar-5.png",
+    avatar: "https://api.dicebear.com/7.x/pixel-art/svg?seed=shiro&backgroundColor=a78bfa,8b5cf6",
     twitter: "https://twitter.com/",
   },
 ];
-
-// プレースホルダーアバター生成（ランダムなグラデーション）
-const getPlaceholderGradient = (id: string) => {
-  const gradients = [
-    "from-pink-400 to-purple-500",
-    "from-cyan-400 to-blue-500",
-    "from-yellow-400 to-orange-500",
-    "from-green-400 to-teal-500",
-    "from-red-400 to-pink-500",
-    "from-indigo-400 to-purple-500",
-    "from-amber-400 to-red-500",
-    "from-lime-400 to-green-500",
-    "from-sky-400 to-indigo-500",
-    "from-rose-400 to-red-500",
-    "from-violet-400 to-purple-500",
-  ];
-  const index = parseInt(id) % gradients.length;
-  return gradients[index];
-};
 
 // ネオンカラー取得
 const getNeonColor = (id: string) => {
@@ -133,23 +114,13 @@ export default function Team() {
                     {/* Border glow */}
                     <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-white/50 transition-colors duration-300 z-20 pointer-events-none" />
 
-                    {member.avatar.startsWith("/team/") ? (
-                      // Placeholder gradient avatar
-                      <div
-                        className={`w-full h-full bg-gradient-to-br ${getPlaceholderGradient(member.id)} flex items-center justify-center group-hover:scale-110 transition-transform duration-500`}
-                      >
-                        <span className="text-4xl font-bold text-white/80 group-hover:scale-110 transition-transform duration-300">
-                          {member.name.charAt(0).toUpperCase()}
-                        </span>
-                      </div>
-                    ) : (
-                      <Image
-                        src={member.avatar}
-                        alt={member.name}
-                        fill
-                        className="object-cover group-hover:scale-110 transition-transform duration-500"
-                      />
-                    )}
+                    <Image
+                      src={member.avatar}
+                      alt={member.name}
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                      unoptimized={member.avatar.includes(".svg")}
+                    />
 
                     {/* Overlay on hover */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />

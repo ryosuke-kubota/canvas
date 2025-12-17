@@ -24,6 +24,7 @@ const newsData: NewsItem[] = [
     category: "お知らせ",
     title: "年末年始休業のお知らせについて",
     href: "/news/1",
+    image: "https://picsum.photos/seed/news1/400/300",
   },
   {
     id: "2",
@@ -31,6 +32,7 @@ const newsData: NewsItem[] = [
     category: "プレスリリース",
     title: "新サービス「Canvas Studio」をリリースしました",
     href: "/news/2",
+    image: "https://picsum.photos/seed/news2/400/300",
   },
   {
     id: "3",
@@ -38,6 +40,7 @@ const newsData: NewsItem[] = [
     category: "メディア掲載",
     title: "日経新聞に当社の取り組みが掲載されました",
     href: "/news/3",
+    image: "https://picsum.photos/seed/news3/400/300",
   },
   {
     id: "4",
@@ -45,6 +48,7 @@ const newsData: NewsItem[] = [
     category: "イベント",
     title: "Tech Conference 2024 に登壇します",
     href: "/news/4",
+    image: "https://picsum.photos/seed/news4/400/300",
   },
 ];
 
@@ -78,15 +82,16 @@ export default function News() {
         </ScrollReveal>
 
         {/* News Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-fr">
           {newsData.map((news, index) => (
             <ScrollReveal
               key={news.id}
               animation="bounce"
               delay={index * 100}
               duration={700}
+              className="h-full"
             >
-              <Card3D glowColor="rgba(239, 68, 68, 0.2)">
+              <Card3D glowColor="rgba(239, 68, 68, 0.2)" className="h-full">
                 <Link href={news.href} className="group block h-full">
                   <article className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 h-full flex flex-col border border-zinc-100">
                     {/* Thumbnail */}
