@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import AnimatedSection from "./AnimatedSection";
+import ParallaxSection from "./ParallaxSection";
 
 // チームメンバーデータの型定義
 interface TeamMember {
@@ -85,9 +86,20 @@ const getNeonColor = (id: string) => {
 
 export default function Team() {
   return (
-    <section className="py-24 px-6 relative">
+    <section className="py-24 px-6 relative overflow-hidden">
       {/* Semi-transparent background layer */}
       <div className="absolute inset-0 bg-white" />
+
+      {/* Background decorative text with parallax - bottom left, slight angle */}
+      <ParallaxSection
+        speed={0.1}
+        className="absolute bottom-0 -left-10 pointer-events-none select-none z-[1]"
+      >
+        <p className="text-[100px] md:text-[160px] font-black text-zinc-100 whitespace-nowrap tracking-wider rotate-6">
+          Our Team
+        </p>
+      </ParallaxSection>
+
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
         <AnimatedSection className="mb-16 text-center">

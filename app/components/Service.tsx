@@ -2,13 +2,24 @@
 
 import Image from "next/image";
 import ScrollReveal from "./ScrollReveal";
+import ParallaxSection from "./ParallaxSection";
 
 export default function Service() {
   return (
-    <section className="py-24 px-6 relative z-10 isolate">
+    <section className="py-24 px-6 relative z-10 isolate overflow-hidden">
       {/* Solid background to block any bleeding effects from other sections */}
       <div className="absolute inset-0 bg-zinc-100 -z-10" />
-      <div className="max-w-6xl mx-auto">
+
+      {/* Background decorative text with parallax - diagonal position */}
+      <ParallaxSection
+        speed={0.15}
+        className="absolute top-[60%] -left-20 -translate-y-1/2 pointer-events-none select-none z-0"
+      >
+        <p className="text-[140px] md:text-[220px] font-black italic text-zinc-200/60 whitespace-nowrap tracking-wider -rotate-12">
+          Service
+        </p>
+      </ParallaxSection>
+      <div className="max-w-6xl mx-auto relative z-10">
         {/* Section Header */}
         <ScrollReveal animation="fade" className="mb-12">
           <p className="text-sm tracking-[0.2em] text-zinc-400 mb-2">SERVICE</p>

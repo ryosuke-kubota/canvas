@@ -43,6 +43,16 @@ export default function About() {
       {/* Background layer */}
       <div className="absolute inset-0 bg-white" />
 
+      {/* Background decorative text with parallax - right side, vertical */}
+      <ParallaxSection
+        speed={-0.2}
+        className="absolute top-1/2 -right-32 -translate-y-1/2 pointer-events-none select-none z-[1]"
+      >
+        <p className="text-[120px] md:text-[180px] font-black text-zinc-100 whitespace-nowrap tracking-wider rotate-90">
+          About Us
+        </p>
+      </ParallaxSection>
+
       {/* Decorative floating shapes with parallax */}
       <ParallaxSection speed={-0.3} className="absolute top-20 left-10 w-32 h-32 opacity-10 pointer-events-none">
         <div className="w-full h-full bg-gradient-to-br from-pink-500 to-purple-500 rounded-full blur-2xl" />
