@@ -92,15 +92,18 @@ export default function Team() {
 
       {/* Background decorative text with parallax - bottom left, slight angle */}
       <ParallaxSection
-        speed={0.1}
-        className="absolute bottom-0 -left-10 pointer-events-none select-none z-[1]"
+        speed={0.18}
+        className="absolute bottom-16 -left-10 pointer-events-none select-none z-[1]"
+        scale={{ from: 0.8, to: 1.15 }}
+        opacity={{ from: 0.1, to: 0.4 }}
+        rotate={{ from: 2, to: 12 }}
       >
-        <p className="text-[100px] md:text-[160px] font-black text-zinc-100 whitespace-nowrap tracking-wider rotate-6">
+        <p className="text-[100px] md:text-[160px] font-black text-zinc-200 whitespace-nowrap tracking-wider">
           Our Team
         </p>
       </ParallaxSection>
 
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="max-w-[1400px] mx-auto relative z-10">
         {/* Section Header */}
         <AnimatedSection className="mb-16 text-center">
           <p className="text-sm tracking-[0.3em] text-zinc-400 mb-3">TEAM</p>

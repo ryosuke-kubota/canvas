@@ -55,7 +55,7 @@ export default function Footer() {
       </div>
 
       {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-6 py-20 relative">
+      <div className="max-w-[1400px] mx-auto px-6 py-20 relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Left Side - CTA */}
           <AnimatedSection>
@@ -106,7 +106,7 @@ export default function Footer() {
 
       {/* Bottom Footer */}
       <div className="border-t border-zinc-800 relative">
-        <div className="max-w-7xl mx-auto px-6 py-8">
+        <div className="max-w-[1400px] mx-auto px-6 py-8">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
             {/* Logo & Legal Links */}
             <AnimatedSection delay={100}>
@@ -167,7 +167,7 @@ export default function Footer() {
 
       {/* Copyright */}
       <div className="border-t border-zinc-800 relative">
-        <div className="max-w-7xl mx-auto px-6 py-4">
+        <div className="max-w-[1400px] mx-auto px-6 py-4">
           <p className="text-zinc-500 text-xs text-center">
             © 2024 Canvas Corp. All rights reserved.
           </p>

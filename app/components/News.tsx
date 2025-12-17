@@ -57,14 +57,18 @@ export default function News() {
       {/* Background decorative text with parallax */}
       <ParallaxSection
         speed={-0.2}
+        direction="horizontal"
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none z-[1]"
+        scale={{ from: 0.75, to: 1.05 }}
+        opacity={{ from: 0.1, to: 0.35 }}
+        blur={{ from: 4, to: 0 }}
       >
-        <p className="text-[180px] md:text-[280px] font-light italic text-zinc-100 whitespace-nowrap tracking-wider">
+        <p className="text-[180px] md:text-[280px] font-light italic text-zinc-200 whitespace-nowrap tracking-wider">
           The latest Information
         </p>
       </ParallaxSection>
 
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="max-w-[1400px] mx-auto relative z-10">
         {/* Section Header */}
         <ScrollReveal animation="zoom-in" className="mb-16 text-center">
           <p className="text-sm tracking-[0.3em] text-zinc-400 mb-3">ニュース</p>

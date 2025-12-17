@@ -45,10 +45,14 @@ export default function About() {
 
       {/* Background decorative text with parallax - right side, vertical */}
       <ParallaxSection
-        speed={-0.2}
-        className="absolute top-1/2 -right-32 -translate-y-1/2 pointer-events-none select-none z-[1]"
+        speed={-0.25}
+        direction="horizontal"
+        className="absolute top-1/2 -right-20 -translate-y-1/2 pointer-events-none select-none z-[1]"
+        scale={{ from: 0.9, to: 1.2 }}
+        opacity={{ from: 0.08, to: 0.35 }}
+        blur={{ from: 3, to: 0 }}
       >
-        <p className="text-[120px] md:text-[180px] font-black text-zinc-100 whitespace-nowrap tracking-wider rotate-90">
+        <p className="text-[120px] md:text-[180px] font-black text-zinc-200 whitespace-nowrap tracking-wider rotate-90">
           About Us
         </p>
       </ParallaxSection>
@@ -61,7 +65,7 @@ export default function About() {
         <div className="w-full h-full bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full blur-2xl" />
       </ParallaxSection>
 
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="max-w-[1400px] mx-auto relative z-10">
         {/* Section Header */}
         <ScrollReveal animation="blur" className="mb-16 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-zinc-800">

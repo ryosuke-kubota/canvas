@@ -12,14 +12,17 @@ export default function Service() {
 
       {/* Background decorative text with parallax - diagonal position */}
       <ParallaxSection
-        speed={0.15}
+        speed={0.2}
         className="absolute top-[60%] -left-20 -translate-y-1/2 pointer-events-none select-none z-0"
+        scale={{ from: 0.85, to: 1.15 }}
+        opacity={{ from: 0.15, to: 0.5 }}
+        rotate={{ from: -15, to: -8 }}
       >
-        <p className="text-[140px] md:text-[220px] font-black italic text-zinc-200/60 whitespace-nowrap tracking-wider -rotate-12">
+        <p className="text-[140px] md:text-[220px] font-black italic text-zinc-300 whitespace-nowrap tracking-wider">
           Service
         </p>
       </ParallaxSection>
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="max-w-[1400px] mx-auto relative z-10">
         {/* Section Header */}
         <ScrollReveal animation="fade" className="mb-12">
           <p className="text-sm tracking-[0.2em] text-zinc-400 mb-2">SERVICE</p>

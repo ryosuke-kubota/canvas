@@ -215,10 +215,13 @@ export default function Marketing() {
 
       {/* Background decorative text with parallax */}
       <ParallaxSection
-        speed={-0.1}
+        speed={-0.15}
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none z-[1]"
+        scale={{ from: 0.8, to: 1.2 }}
+        opacity={{ from: 0.15, to: 0.5 }}
+        rotate={{ from: -5, to: 5 }}
       >
-        <p className="text-[120px] md:text-[200px] font-light italic text-zinc-800/50 whitespace-nowrap tracking-wider">
+        <p className="text-[120px] md:text-[200px] font-light italic text-zinc-700 whitespace-nowrap tracking-wider">
           Marketing
         </p>
       </ParallaxSection>
