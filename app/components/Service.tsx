@@ -37,7 +37,7 @@ export default function Service() {
           <ScrollReveal animation="fade" delay={100} className="md:col-span-2">
             <div className="h-full bg-gradient-to-br from-pink-100 via-purple-100 to-indigo-100 rounded-3xl p-8 border border-purple-200/50 overflow-hidden relative">
               {/* Background image */}
-              <div className="absolute right-[6%] bottom-[-8%] w-[80%] h-[120%] opacity-90">
+              <div className="absolute right-[-10%] bottom-[-8%] w-[80%] h-[120%] opacity-90">
                 <Image
                   src="/images/service-marketing.png"
                   alt="Marketing Support"
