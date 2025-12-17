@@ -50,7 +50,7 @@ const newsData: NewsItem[] = [
 
 export default function News() {
   return (
-    <section className="py-24 px-6 relative overflow-hidden">
+    <section className="py-32 md:py-40 px-6 relative overflow-hidden">
       {/* Semi-transparent background layer */}
       <div className="absolute inset-0 bg-white" />
 

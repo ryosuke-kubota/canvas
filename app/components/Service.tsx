@@ -6,7 +6,7 @@ import ParallaxSection from "./ParallaxSection";
 
 export default function Service() {
   return (
-    <section className="py-24 px-6 relative z-10 isolate overflow-hidden">
+    <section className="py-32 md:py-40 px-6 relative z-10 isolate overflow-hidden">
       {/* Solid background to block any bleeding effects from other sections */}
       <div className="absolute inset-0 bg-zinc-100 -z-10" />
 

@@ -192,7 +192,7 @@ function getGraphic(type: string) {
 
 export default function Marketing() {
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section className="py-32 md:py-40 relative overflow-hidden">
       {/* Dark background */}
       <div className="absolute inset-0 bg-zinc-900" />
 
