@@ -17,7 +17,7 @@ export default function Hero() {
                   autoPlay
                   loop
                   muted
-                  poster="video/1920x1080_video-03.webp"
+                  poster="video/hero/hero.png"
                 >
                   <source type="video/mp4" src="video/hero/hero.mp4" />
                   {/* <source
@@ -218,12 +218,7 @@ export default function Hero() {
             </div>
           </div>
           <div className="mxd-hero-06__bottom loading__fade">
-            <div className="mxd-hero-06__mark">
-              <div className="mxd-hero__mark">
-                <span className="mark-icon" />
-                <span className="mark-text">Available for freelance</span>
-              </div>
-            </div>
+            <div></div>
             <div className="mxd-hero-06__more">
               <AnimatedButton
                 text="Scroll for more"
@@ -266,7 +261,7 @@ export default function Hero() {
                   <text>
                     {/* button text here!!! */}
                     <textPath xlinkHref="#textPath">
-                      Download CV * Download CV * Download CV *
+                      Canvas * Canvas * Canvas * Canvas * Canvas *
                     </textPath>
                   </text>
                 </g>

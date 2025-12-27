@@ -23,7 +23,7 @@ export default function Team() {
                       {teamMembers.map((member) => (
                         <div
                           key={member.id}
-                          className="col-12 col-md-6 mxd-team-cards__item mxd-grid-item no-margin-desktop animate-card-3"
+                          className="col-12 col-md-4 mxd-team-cards__item mxd-grid-item no-margin-desktop animate-card-3"
                         >
                           <div className="mxd-team-cards__media anim-uni-in-up">
                             <div className="mxd-team-cards__photo">

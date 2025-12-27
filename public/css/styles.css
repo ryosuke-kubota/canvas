@@ -162,6 +162,13 @@ html {
 .mxd-menu__caption {
     max-width: 200px;
 }
+
+.mxd-team-cards__media,
+.mxd-team-cards__photo {
+  height: auto;
+  aspect-ratio: 1 / 1;
+}
+
 @media only screen and (max-width: 767px) {
   .mxd-hero-06__content {
     overflow: visible;
