@@ -1,33 +1,39 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import "../public/css/styles.css";
+import ClientLayout from "@/components/layout/ClientLayout";
+import { Metadata } from "next";
+import { Noto_Sans_JP } from "next/font/google";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const notoSansJP = Noto_Sans_JP({
   subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  display: "swap",
+  variable: "--font-noto-sans-jp",
 });
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  title: "株式会社Canvas | Create Your Future",
-  description: "株式会社Canvasのコーポレートサイト。私たちは未来を創造します。",
+  title: "Rayo - Digital Agency & Personal Portfolio React Nextjs Template",
+  description:
+    "Rayo - Digital Agency & Personal Portfolio React Nextjs Template",
 };
-
+const setColorSchemeScript = `
+(function() {
+  try {
+    var scheme = localStorage.getItem('color-scheme') || 'light';
+    document.documentElement.setAttribute('color-scheme', scheme);
+  } catch(e) {}
+})();
+`;
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html suppressHydrationWarning lang="en" className={`no-touch ${notoSansJP.variable}`}>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: setColorSchemeScript }} />
+      </head>
+      <body>
+        <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
   );
