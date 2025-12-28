@@ -18,9 +18,9 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Preview || Rayo - Digital Agency & Personal Portfolio React Nextjs Template",
+    "Canvas - Web3コンサルティング・グローバルマーケティング",
   description:
-    "Rayo - Digital Agency & Personal Portfolio React Nextjs Template",
+    "Web3への進出を支援するためのコンサルティング・開発・グローバルマーケティングを行なっております。",
 };
 export default function Home() {
   return (

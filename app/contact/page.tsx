@@ -21,7 +21,7 @@ export default function ContactPage() {
         className="mxd-page-content inner-page-content"
       >
         <PageTitle />
-        <ContactForm />
+        {/* <ContactForm /> */}
         <div className="mxd-section padding-grid-pre-mtext">
           <div className="mxd-container">
             <div className="mxd-divider">
@@ -70,11 +70,11 @@ export default function ContactPage() {
             {/* Block - Marquee Text One Line End */}
           </div>
         </div>
-        <Socials />
-        <Locations />
+        {/* <Socials />
+        <Locations /> */}
         <Cta />
       </main>
-      <Footer2 />
+      <Footer2 text="canvas" />
     </>
   );
 }

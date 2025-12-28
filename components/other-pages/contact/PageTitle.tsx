@@ -40,12 +40,10 @@ export default function PageTitle() {
               <div className="col-12 col-xl-8 mxd-grid-item no-margin">
                 <div className="mxd-block__content">
                   <div className="mxd-block__inner-headline loading__item">
-                    <h1 className="inner-headline__title">
-                      Let&apos;s talk
-                      <br />
-                      about your project!
+                    <h1 className="inner-headline__title font-ja">
+                      お問い合わせ
                       {/* <a class="btn btn-line-headline slide-right-up anim-no-delay" href="mailto:example@example.com?subject=Message%20from%20your%20site">
-                    <span class="btn-caption">hello@rayo.com</span>
+                    <span class="btn-caption">info@canva3.jp</span>
                     <i class="ph-bold ph-arrow-up-right"></i>
                   </a> */}
                     </h1>
@@ -53,14 +51,13 @@ export default function PageTitle() {
                       className="btn btn-line-headline slide-right-up anim-no-delay"
                       href="mailto:example@example.com?subject=Message%20from%20your%20site"
                     >
-                      <span className="btn-caption">hello@rayo.com</span>
+                      <span className="btn-caption">info@canva3.jp</span>
                       <i className="ph-bold ph-arrow-up-right" />
                     </a>
-                    <p className="inner-headline__text t-large t-bright loading__item">
-                      Have questions? We&apos;ve got the answers! Here,
-                      you&apos;ll find clear and concise information about our
-                      services, process, and what to expect when working with
-                      us. If you need more details, feel free to reach out!
+                    <p className="inner-headline__text t-large t-bright loading__item font-ja">
+                      ご不明点や気になる点がございましたら、いつでもお気軽にご相談ください。
+                      サービス内容・ご依頼の流れ・ご利用時の注意点など、何でも大歓迎です。
+                      皆さまからのお問い合わせをお待ちしております。
                     </p>
                   </div>
                 </div>

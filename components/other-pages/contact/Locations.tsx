@@ -51,7 +51,7 @@ export default function Locations() {
                               </li>
                               <li className="anim-uni-in-up">
                                 <a href="mailto:example@example.com?subject=Message%20from%20your%20site">
-                                  hello@rayo.com
+                                  info@canva3.jp
                                 </a>
                               </li>
                             </ul>
@@ -82,7 +82,7 @@ export default function Locations() {
                               </li>
                               <li className="anim-uni-in-up">
                                 <a href="mailto:example@example.com?subject=Message%20from%20your%20site">
-                                  hello@rayo.com
+                                  info@canva3.jp
                                 </a>
                               </li>
                             </ul>
