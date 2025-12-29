@@ -1,0 +1,53 @@
+[
+  {
+    "id": 1,
+    "name": "IZU",
+    "position": "Founder, SEO",
+    "image": {
+      "src": "/img/team/team1.avif",
+      "alt": "IZU",
+      "width": 800,
+      "height": 920
+    },
+    "socials": [
+      {
+        "name": "X",
+        "url": "https://www.x.com/"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "SHUN",
+    "position": "SEO, Brand manager",
+    "image": {
+      "src": "/img/team/team2.avif",
+      "alt": "SHUN",
+      "width": 800,
+      "height": 920
+    },
+    "socials": [
+      {
+        "name": "X",
+        "url": "https://www.x.com/"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Alex Tomato",
+    "position": "SEO, Brand manager",
+    "image": {
+      "src": "/img/team/team3.avif",
+      "alt": "Alex Tomato",
+      "width": 800,
+      "height": 920
+    },
+    "socials": [
+      {
+        "name": "X",
+        "url": "https://www.x.com/"
+      }
+    ]
+  }
+]

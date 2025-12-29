@@ -1,0 +1,30 @@
+[
+  {
+    "title": "ホーム",
+    "href": "/"
+  },
+  {
+    "title": "ニュース",
+    "href": "#news"
+  },
+  {
+    "title": "私たちについて",
+    "href": "#about"
+  },
+  {
+    "title": "サービス",
+    "href": "#services"
+  },
+  {
+    "title": "マーケティングサポート",
+    "href": "#marketing-support"
+  },
+  {
+    "title": "チーム",
+    "href": "#team"
+  },
+  {
+    "title": "お問い合わせ",
+    "href": "#contact"
+  }
+]
