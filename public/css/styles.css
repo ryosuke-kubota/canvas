@@ -169,6 +169,22 @@ html {
   aspect-ratio: 1 / 1;
 }
 
+.services-stack__image {
+  width: 50%;
+}
+.services-stack__image .service-img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.mxd-promo__bg {
+  background-image: url('/img/cta/cta.png');
+}
+
+.divider-image-3 {
+  background-image: url('/img/contact/contact-bg.jpg');
+}
+
 @media only screen and (max-width: 767px) {
   .mxd-hero-06__content {
     overflow: visible;
@@ -190,5 +206,20 @@ html {
   .mxd-services-stack__info p,
   .mxd-services-stack__info ul li {
     font-size: 1.8rem;
+  }
+
+  .mxd-services-cards-s__image.image-top-right {
+    top: 10%;
+    right: auto;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  .mxd-services-cards-s__image.image-bottom {
+    bottom: -100px;
+  }
+
+  .mxd-services-cards-s__image.image-bottom-2 {
+    bottom: 10px;
   }
 }

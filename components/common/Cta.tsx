@@ -39,20 +39,20 @@ export default function Cta() {
               </div>
               {/* parallax images */}
               <div className="mxd-promo__images">
-                <Image
+                {/* <Image
                   className="promo-image promo-image-1"
                   alt="Image"
-                  src="/img/illustrations/cta-img-01.webp"
+                  src="/img/cta/cta.png"
                   width={800}
                   height={912}
-                />
-                <Image
+                /> */}
+                {/* <Image
                   className="promo-image promo-image-2"
                   alt="Image"
-                  src="/img/illustrations/cta-img-02.webp"
+                  src="/img/cta/cta.png"
                   width={600}
                   height={601}
-                />
+                /> */}
               </div>
             </div>
           </div>

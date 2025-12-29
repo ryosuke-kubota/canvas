@@ -50,7 +50,7 @@ export default function Services() {
                     <div className="mxd-services-cards-s__image image-right">
                       <Image
                         alt="Illustration"
-                        src="/img/illustrations/1200x1200_service-image-01.webp"
+                        src="/img/services/marketing-support.png"
                         width={910}
                         height={1200}
                       />
@@ -72,7 +72,7 @@ export default function Services() {
                       <Image
                         className="mxd-move"
                         alt="Illustration"
-                        src="/img/illustrations/1200x1200_service-image-02.webp"
+                        src="/img/services/development.png"
                         width={1200}
                         height={1200}
                       />
@@ -94,7 +94,7 @@ export default function Services() {
                       <Image
                         className="mxd-rotate-slow"
                         alt="Illustration"
-                        src="/img/illustrations/1200x1200_service-image-03.webp"
+                        src="/img/services/strategy.png"
                         width={1200}
                         height={1200}
                       />
@@ -115,7 +115,7 @@ export default function Services() {
                     <div className="mxd-services-cards-s__image image-bottom image-bottom-2">
                       <Image
                         alt="Illustration"
-                        src="/img/illustrations/1200x1200_service-image-04.webp"
+                        src="/img/services/accelerator.png"
                         width={891}
                         height={1200}
                       />

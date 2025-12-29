@@ -29,14 +29,14 @@ export default function ServicesStack() {
                   <Image
                     className="service-img service-img-s"
                     alt="Service/Feature Image"
-                    src="/img/services/800x800_ser-01.webp"
+                    src="/img/marketing-support/strategy.webp"
                     width={800}
                     height={800}
                   />
                   <Image
                     className="service-img service-img-m"
                     alt="Service/Feature Image"
-                    src="/img/services/1000x1000_ser-01.webp"
+                    src="/img/marketing-support/strategy.webp"
                     width={1000}
                     height={1000}
                   />
@@ -61,14 +61,14 @@ export default function ServicesStack() {
                   <Image
                     className="service-img service-img-s"
                     alt="Service/Feature Image"
-                    src="/img/services/800x800_ser-02.webp"
+                    src="/img/marketing-support/kol.png"
                     width={800}
                     height={800}
                   />
                   <Image
                     className="service-img service-img-m"
                     alt="Service/Feature Image"
-                    src="/img/services/1000x1000_ser-02.webp"
+                    src="/img/marketing-support/kol.png"
                     width={1000}
                     height={1000}
                   />
@@ -103,14 +103,14 @@ export default function ServicesStack() {
                   <Image
                     className="service-img service-img-s"
                     alt="Service/Feature Image"
-                    src="/img/services/800x800_ser-03.webp"
+                    src="/img/marketing-support/x.jpg"
                     width={800}
                     height={800}
                   />
                   <Image
                     className="service-img service-img-m"
                     alt="Service/Feature Image"
-                    src="/img/services/1000x1000_ser-03.webp"
+                    src="/img/marketing-support/x.jpg"
                     width={1000}
                     height={1000}
                   />
@@ -147,14 +147,14 @@ export default function ServicesStack() {
                   <Image
                     className="service-img service-img-s"
                     alt="Service/Feature Image"
-                    src="/img/services/800x800_ser-04.webp"
+                    src="/img/marketing-support/discord.jpg"
                     width={800}
                     height={800}
                   />
                   <Image
                     className="service-img service-img-m"
                     alt="Service/Feature Image"
-                    src="/img/services/1000x1000_ser-04.webp"
+                    src="/img/marketing-support/discord.jpg"
                     width={1000}
                     height={1000}
                   />
@@ -187,14 +187,14 @@ export default function ServicesStack() {
                   <Image
                     className="service-img service-img-s"
                     alt="Service/Feature Image"
-                    src="/img/services/800x800_ser-04.webp"
+                    src="/img/marketing-support/brand.jpg"
                     width={800}
                     height={800}
                   />
                   <Image
                     className="service-img service-img-m"
                     alt="Service/Feature Image"
-                    src="/img/services/1000x1000_ser-04.webp"
+                    src="/img/marketing-support/brand.jpg"
                     width={1000}
                     height={1000}
                   />
