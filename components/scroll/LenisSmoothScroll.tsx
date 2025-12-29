@@ -40,26 +40,20 @@ export default function LenisSmoothScroll() {
     // Update ScrollTrigger when Lenis scrolls
     lenis.on("scroll", ScrollTrigger.update);
 
-    // Centralized refresh handler for all animations
-    const handleRefresh = () => {
-      // Small delay to ensure all components are ready
-      setTimeout(() => {
-        ScrollTrigger.refresh();
-      }, 100);
-    };
-
-    // Handle window resize
+    // Handle window resize - debounced to prevent excessive refreshes
+    let resizeTimeout: ReturnType<typeof setTimeout>;
     const handleResize = () => {
-      handleRefresh();
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        ScrollTrigger.refresh();
+      }, 200);
     };
 
-    // Listen for ScrollTrigger refresh events
-    ScrollTrigger.addEventListener("refresh", handleRefresh);
     window.addEventListener("resize", handleResize);
 
     return () => {
+      clearTimeout(resizeTimeout);
       window.removeEventListener("resize", handleResize);
-      ScrollTrigger.removeEventListener("refresh", handleRefresh);
       // Revert scrollerProxy
       ScrollTrigger.scrollerProxy(document.body, {});
       // Reset body overflow
