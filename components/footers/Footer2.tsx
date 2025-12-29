@@ -129,18 +129,18 @@ export default function Footer2({ text = "rayosttudio" }: { text?: string }) {
             {/* links */}
             <div className="footer-blocks__links anim-uni-in-up">
               <AnimatedButton
-                text="Privacy Policy"
+                text="プライバシーポリシー"
                 as={"a"}
-                className="btn btn-line-xsmall btn-muted slide-right anim-no-delay"
-                href="#"
+                className="btn btn-line-xsmall btn-muted slide-right anim-no-delay font-ja"
+                href="/privacy"
               >
                 <i className="ph ph-arrow-right" />
               </AnimatedButton>
               <AnimatedButton
-                text="Terms &amp; conditions"
+                text="利用規約"
                 as={"a"}
-                className="btn btn-line-xsmall btn-muted slide-right anim-no-delay"
-                href="#"
+                className="btn btn-line-xsmall btn-muted slide-right anim-no-delay font-ja"
+                href="/terms"
               >
                 <i className="ph ph-arrow-right" />
               </AnimatedButton>
