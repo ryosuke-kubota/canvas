@@ -35,7 +35,7 @@ export default function Blogs({
                     <AnimatedButton
                       text="All Articles"
                       className="btn btn-anim btn-default btn-outline slide-right-up"
-                      href={`/blog-standard`}
+                      href={`/news`}
                     >
                       <i className="ph-bold ph-arrow-up-right" />
                     </AnimatedButton>
@@ -58,7 +58,7 @@ export default function Blogs({
                   >
                     <Link
                       className="mxd-blog-preview__media"
-                      href={`/blog-article`}
+                      href={`/news/1`}
                     >
                       <BackgroundParallax
                         className={`mxd-blog-preview__image ${item.imageClass} parallax-img-small`}
@@ -86,7 +86,7 @@ export default function Blogs({
                     </Link>
 
                     <div className="mxd-blog-preview__data">
-                      <Link className="anim-uni-in-up" href={`/blog-article`}>
+                      <Link className="anim-uni-in-up" href={`/news/1`}>
                         {item.title.before ?? ""}{" "}
                         {item.title.highlight ? (
                           <span>{item.title.highlight}</span>

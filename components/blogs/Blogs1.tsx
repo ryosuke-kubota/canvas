@@ -114,7 +114,7 @@ export default function Blogs1() {
                   key={featured.id}
                   className="mxd-post post-featured radius-m"
                 >
-                  <Link className="post-featured__thumb" href={`/blog-article`}>
+                  <Link className="post-featured__thumb" href={`/news/1`}>
                     <Image
                       alt="Featured Post Thumb"
                       src={featured.img}
@@ -143,7 +143,7 @@ export default function Blogs1() {
                     </div>
 
                     <h3 className="post-featured__title">
-                      <Link href={`/blog-article`}>{featured.title}</Link>
+                      <Link href={`/news/1`}>{featured.title}</Link>
                     </h3>
 
                     <div className="post-featured__excerpt">
@@ -157,7 +157,7 @@ export default function Blogs1() {
                 <article className="mxd-post post-simple" key={idx}>
                   <Link
                     className="post-simple__thumb radius-m"
-                    href={`/blog-article`}
+                    href={`/news/1`}
                   >
                     <Image
                       alt={p.imgAlt}
@@ -188,7 +188,7 @@ export default function Blogs1() {
 
                       <div className="post-simple__title">
                         <h5>
-                          <Link href={`/blog-article`}>{p.title}</Link>
+                          <Link href={`/news/1`}>{p.title}</Link>
                         </h5>
                       </div>
                     </div>
@@ -197,7 +197,7 @@ export default function Blogs1() {
                       <AnimatedButton
                         className="btn btn-anim btn-default btn-outline slide-right-up"
                         text="Read More"
-                        href={`/blog-article`}
+                        href={`/news/1`}
                       >
                         <i className="ph ph-arrow-up-right" />
                       </AnimatedButton>
@@ -275,7 +275,7 @@ export default function Blogs1() {
                   {blogs4.map((rp) => (
                     <li className="recent-post__item" key={rp.title}>
                       <div className="recent-post__thumb">
-                        <Link href={`/blog-article`}>
+                        <Link href={`/news/1`}>
                           <Image
                             alt="Recent Post Preview"
                             src={rp.img}
@@ -292,7 +292,7 @@ export default function Blogs1() {
                           </span>
                         </div>
                         <div className="recent-post__title">
-                          <Link href={`/blog-article`}>{rp.title}</Link>
+                          <Link href={`/news/1`}>{rp.title}</Link>
                         </div>
                       </div>
                     </li>

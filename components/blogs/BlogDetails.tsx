@@ -17,10 +17,10 @@ export default function BlogDetails() {
                 <div className="mxd-article__meta">
                   <div className="mxd-article__breadcrumbs loading__item">
                     <span>
-                      <Link href={`/index-main`}>Home</Link>
+                      <Link href={`/`}>Home</Link>
                     </span>
                     <span>
-                      <Link href={`/blog-standard`}>Insights</Link>
+                      <Link href={`/news`}>News</Link>
                     </span>
                     <span className="current-item">
                       My journey into the future of art
@@ -48,13 +48,13 @@ export default function BlogDetails() {
                 </div>
                 <div className="mxd-article__tags loading__item">
                   <span className="tag tag-default tag-outline tag-link-outline">
-                    <Link href={`/blog-standard`}>Midjourney</Link>
+                    <Link href={`/news`}>Midjourney</Link>
                   </span>
                   <span className="tag tag-default tag-outline tag-link-outline">
-                    <Link href={`/blog-standard`}>AI</Link>
+                    <Link href={`/news`}>AI</Link>
                   </span>
                   <span className="tag tag-default tag-outline tag-link-outline">
-                    <Link href={`/blog-standard`}>Editorial</Link>
+                    <Link href={`/news`}>Editorial</Link>
                   </span>
                 </div>
               </div>
