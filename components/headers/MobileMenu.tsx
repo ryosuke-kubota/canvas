@@ -1,7 +1,15 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import menuItems from "@/data/menu.json"; // adjust path accordingly
+import menuItemsData from "@/data/menu.json"; // adjust path accordingly
+
+type MenuItem = {
+  title: string;
+  href: string;
+  submenu?: { label: string; href: string }[];
+};
+
+const menuItems = menuItemsData as MenuItem[];
 
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
