@@ -7,9 +7,9 @@ import Services from "@/components/other-pages/services/Services";
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title:
-    "Services || Rayo - Digital Agency & Personal Portfolio React Nextjs Template",
+    "Services || Canvas - Web3コンサルティング・グローバルマーケティング",
   description:
-    "Rayo - Digital Agency & Personal Portfolio React Nextjs Template",
+    "Canvas - Web3コンサルティング・グローバルマーケティング",
 };
 export default function ServicesPage() {
   return (

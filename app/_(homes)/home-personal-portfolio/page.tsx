@@ -11,9 +11,9 @@ import Footer2 from "@/components/footers/Footer2";
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title:
-    "Personal Portfolio || Rayo - Digital Agency & Personal Portfolio React Nextjs Template",
+    "Personal Portfolio || Canvas - Web3コンサルティング・グローバルマーケティング",
   description:
-    "Rayo - Digital Agency & Personal Portfolio React Nextjs Template",
+    "Canvas - Web3コンサルティング・グローバルマーケティング",
 };
 export default function HomePersonalPortfolioPage() {
   return (

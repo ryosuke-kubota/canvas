@@ -14,9 +14,9 @@ import Services from "@/components/homes/home-web-agency/Services";
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title:
-    "Web Agency || Rayo - Digital Agency & Personal Portfolio React Nextjs Template",
+    "Web Agency || Canvas - Web3コンサルティング・グローバルマーケティング",
   description:
-    "Rayo - Digital Agency & Personal Portfolio React Nextjs Template",
+    "Canvas - Web3コンサルティング・グローバルマーケティング",
 };
 export default function HomeWebAgencyPage() {
   return (

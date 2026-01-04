@@ -5,9 +5,9 @@ import Faqs from "@/components/other-pages/Faqs";
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title:
-    "Faqs || Rayo - Digital Agency & Personal Portfolio React Nextjs Template",
+    "Faqs || Canvas - Web3コンサルティング・グローバルマーケティング",
   description:
-    "Rayo - Digital Agency & Personal Portfolio React Nextjs Template",
+    "Canvas - Web3コンサルティング・グローバルマーケティング",
 };
 export default function FaqsPage() {
   return (

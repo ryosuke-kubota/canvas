@@ -10,9 +10,9 @@ import Solutions from "@/components/portfolios/Solutions";
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title:
-    "Project Details || Rayo - Digital Agency & Personal Portfolio React Nextjs Template",
+    "Project Details || Canvas - Web3コンサルティング・グローバルマーケティング",
   description:
-    "Rayo - Digital Agency & Personal Portfolio React Nextjs Template",
+    "Canvas - Web3コンサルティング・グローバルマーケティング",
 };
 export default function ProjectDetailsPage() {
   return (

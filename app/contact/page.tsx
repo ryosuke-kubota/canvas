@@ -9,9 +9,9 @@ import Socials from "@/components/other-pages/contact/Socials";
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title:
-    "Contact || Rayo - Digital Agency & Personal Portfolio React Nextjs Template",
+    "Contact || Canvas - Web3コンサルティング・グローバルマーケティング",
   description:
-    "Rayo - Digital Agency & Personal Portfolio React Nextjs Template",
+    "Canvas - Web3コンサルティング・グローバルマーケティング",
 };
 export default function ContactPage() {
   return (

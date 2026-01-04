@@ -7,9 +7,9 @@ import Pricing from "@/components/other-pages/Pricing";
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title:
-    "Pricing || Rayo - Digital Agency & Personal Portfolio React Nextjs Template",
+    "Pricing || Canvas - Web3コンサルティング・グローバルマーケティング",
   description:
-    "Rayo - Digital Agency & Personal Portfolio React Nextjs Template",
+    "Canvas - Web3コンサルティング・グローバルマーケティング",
 };
 export default function PricingPage() {
   return (

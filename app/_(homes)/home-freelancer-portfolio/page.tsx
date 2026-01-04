@@ -28,9 +28,9 @@ import TechStack from "@/components/homes/home-freelancer-portfolio/TechStack";
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title:
-    "Freelancer Portfolio || Rayo - Digital Agency & Personal Portfolio React Nextjs Template",
+    "Freelancer Portfolio || Canvas - Web3コンサルティング・グローバルマーケティング",
   description:
-    "Rayo - Digital Agency & Personal Portfolio React Nextjs Template",
+    "Canvas - Web3コンサルティング・グローバルマーケティング",
 };
 export default function HomeFreelancerPortfolioPage() {
   return (

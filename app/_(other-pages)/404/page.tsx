@@ -5,9 +5,9 @@ import { Metadata } from "next";
 import AnimatedButton from "@/components/animation/AnimatedButton";
 export const metadata: Metadata = {
   title:
-    "Page Not Found || Rayo - Digital Agency & Personal Portfolio React Nextjs Template",
+    "Page Not Found || Canvas - Web3コンサルティング・グローバルマーケティング",
   description:
-    "Rayo - Digital Agency & Personal Portfolio React Nextjs Template",
+    "Canvas - Web3コンサルティング・グローバルマーケティング",
 };
 export default function NotFoundPage() {
   return (

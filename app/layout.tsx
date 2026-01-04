@@ -10,9 +10,9 @@ const notoSansJP = Noto_Sans_JP({
   variable: "--font-noto-sans-jp",
 });
 export const metadata: Metadata = {
-  title: "Rayo - Digital Agency & Personal Portfolio React Nextjs Template",
+  title: "Canvas - Web3コンサルティング・グローバルマーケティング",
   description:
-    "Rayo - Digital Agency & Personal Portfolio React Nextjs Template",
+    "Canvas - Web3コンサルティング・グローバルマーケティング",
 };
 const setColorSchemeScript = `
 (function() {
@@ -28,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html suppressHydrationWarning lang="en" className={`no-touch ${notoSansJP.variable}`}>
+    <html suppressHydrationWarning lang="ja" className={`no-touch ${notoSansJP.variable}`}>
       <head>
         <script dangerouslySetInnerHTML={{ __html: setColorSchemeScript }} />
       </head>

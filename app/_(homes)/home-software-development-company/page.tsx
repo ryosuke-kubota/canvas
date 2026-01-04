@@ -16,9 +16,9 @@ import TechStacks from "@/components/homes/home-software-development-company/Tec
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title:
-    "Software Development Company || Rayo - Digital Agency & Personal Portfolio React Nextjs Template",
+    "Software Development Company || Canvas - Web3コンサルティング・グローバルマーケティング",
   description:
-    "Rayo - Digital Agency & Personal Portfolio React Nextjs Template",
+    "Canvas - Web3コンサルティング・グローバルマーケティング",
 };
 export default function HomeSoftwareDevelopmentCompanyPage() {
   return (
