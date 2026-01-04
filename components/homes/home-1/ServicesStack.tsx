@@ -7,11 +7,11 @@ import RevealText from "@/components/animation/RevealText";
 export default function ServicesStack() {
   return (
     <div className="mxd-section padding-stacked-section">
+      <h2 className="reveal-type reveal-type anim-uni-in-up text-center font-ja">マーケティングサポート</h2>
       <div className="mxd-container grid-container">
         {/* Block - Services/Features Stacking Cards Start */}
         <div className="mxd-block mxd-grid-item no-margin">
           <div className="content__block">
-            <h2 className="reveal-type reveal-type anim-uni-in-up text-center font-ja">マーケティングサポート</h2>
             <StackCards className="stack-wrapper in-content-stack">
               {/* services stack single item */}
 
