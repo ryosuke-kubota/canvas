@@ -26,12 +26,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 // Static export用に生成するページのIDを指定
 export async function generateStaticParams() {
-  try {
-    const ids = await getAllNewsIds();
-    return ids.map((id: string) => ({ id }));
-  } catch {
-    return [];
-  }
+  const ids = await getAllNewsIds();
+  return ids.map((id: string) => ({ id }));
 }
 
 export default async function NewsDetailPage({ params }: Props) {
