@@ -1,9 +1,10 @@
-import { createClient, MicroCMSClient } from "microcms-js-sdk";
+import { createClient } from "microcms-js-sdk";
 
 // microCMSクライアント（遅延初期化）
-let _client: MicroCMSClient | null = null;
+type Client = ReturnType<typeof createClient>;
+let _client: Client | null = null;
 
-function getClient(): MicroCMSClient {
+function getClient(): Client {
   if (_client) return _client;
 
   const serviceDomain = process.env.MICROCMS_SERVICE_DOMAIN;
