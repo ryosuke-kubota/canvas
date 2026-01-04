@@ -1,4 +1,4 @@
-name: Deploy React to Onamae Server
+name: Deploy Next.js to Onamae Server
 
 on:
   push:
@@ -12,18 +12,26 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
       - name: Install dependencies
         run: npm install
 
-      - name: Build React app
+      - name: Build Next.js app
         run: npm run build
+        env:
+          MICROCMS_SERVICE_DOMAIN: ${{ secrets.MICROCMS_SERVICE_DOMAIN }}
+          MICROCMS_API_KEY: ${{ secrets.MICROCMS_API_KEY }}
 
       - name: Deploy via rsync over SSH
         uses: burnett01/rsync-deployments@5.2
         with:
           switches: -avz --delete
-          path: dist/
-          remote_path: public_html/renew.canva3.jp # ←ここに修正
+          path: out/
+          remote_path: public_html/renew.canva3.jp
           remote_host: ${{ secrets.WEB_SERVER }}
           remote_user: ${{ secrets.SSH_USER }}
           remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
