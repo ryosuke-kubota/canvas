@@ -27,6 +27,7 @@ export default function Header1() {
           {/* logo icon */}
           <Image
             src="/img/canvas-logo.png"
+            className="mxd-logo__image"
             alt="Canvas Logo"
             width={240}
             height={60}
@@ -35,7 +36,7 @@ export default function Header1() {
       </div>
       {/* header controls */}
       <div className="mxd-header__controls loading__fade">
-        <ThemeSwitcherButton />
+        {/* <ThemeSwitcherButton /> */}
 
         <AnimatedButton
           text="お問い合わせ"

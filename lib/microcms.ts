@@ -1,0 +1,72 @@
+import { createClient } from "microcms-js-sdk";
+
+// microCMSクライアント
+export const client = createClient({
+  serviceDomain: process.env.MICROCMS_SERVICE_DOMAIN || "",
+  apiKey: process.env.MICROCMS_API_KEY || "",
+});
+
+// 繰り返しフィールドの型
+type TagField = {
+  fieldId: string;
+  tag: string;
+};
+
+// ニュース記事の型定義
+export type NewsArticle = {
+  id: string;
+  createdAt: string;
+  updatedAt: string;
+  publishedAt: string;
+  revisedAt: string;
+  title: string;
+  thumbnail?: {
+    url: string;
+    width: number;
+    height: number;
+  };
+  content: string;
+  category?: string;
+  tags?: TagField[];  // 繰り返しフィールド（オブジェクト配列）
+  excerpt?: string;
+};
+
+// タグ配列を文字列配列に変換するヘルパー
+export function getTagStrings(tags?: TagField[]): string[] {
+  if (!tags) return [];
+  return tags.map((t) => t.tag);
+}
+
+export type NewsListResponse = {
+  contents: NewsArticle[];
+  totalCount: number;
+  offset: number;
+  limit: number;
+};
+
+// ニュース一覧を取得
+export async function getNewsList(limit = 10, offset = 0) {
+  const response = await client.get<NewsListResponse>({
+    endpoint: "news",
+    queries: { limit, offset },
+  });
+  return response;
+}
+
+// ニュース記事を取得
+export async function getNewsDetail(id: string) {
+  const response = await client.get<NewsArticle>({
+    endpoint: "news",
+    contentId: id,
+  });
+  return response;
+}
+
+// すべてのニュースIDを取得（静的生成用）
+export async function getAllNewsIds() {
+  const response = await client.get<NewsListResponse>({
+    endpoint: "news",
+    queries: { fields: "id", limit: 100 },
+  });
+  return response.contents.map((article) => article.id);
+}
