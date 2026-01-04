@@ -42,7 +42,7 @@ export default async function NewsDetailPage({ params }: Props) {
     <>
       <main
         id="mxd-page-content"
-        className="mxd-page-content inner-page-content"
+        className="mxd-page-content inner-page-content news-detail-page-content"
       >
         <NewsDetail article={article} />
         <Cta />

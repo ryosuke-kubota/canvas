@@ -306,3 +306,50 @@ html {
     font-size: 2.4rem;  
   }
 }
+
+
+/* ニュース詳細ページ */
+.news-detail-page-content h1 {
+  font-size: 2rem;
+}
+
+.news-detail-page-content .mxd-article__breadcrumbs span {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.news-detail-page-content .tag {
+  font-size: 1rem;
+}
+
+.news-detail-page-content .mxd-article__thumb {
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+.news-detail-page-content h2 {
+  font-size: 1.8rem;
+}
+
+.news-detail-page-content p {
+  font-size: 1.4rem;
+}
+
+@media only screen and (min-width: 1200px) {
+  .news-detail-page-content h1 {
+    font-size: 4rem;
+  }
+  .news-detail-page-content .mxd-article__breadcrumbs span {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+  .news-detail-page-content .tag {
+    font-size: 1.6rem;
+  }
+  .news-detail-page-content h2 {
+    font-size: 3rem;
+  }
+  .news-detail-page-content p {
+    font-size: 2rem;
+  }
+}
