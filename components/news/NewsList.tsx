@@ -29,7 +29,7 @@ export default function NewsList({ articles, totalCount }: Props) {
                 <div className="col-12 col-xl-10 mxd-grid-item no-margin">
                   <div className="mxd-block__content">
                     <div className="mxd-block__inner-headline loading__item">
-                      <h1 className="inner-headline__title headline-img-before headline-img-06 font-ja">
+                      <h1 className="inner-headline__title headline-img-06 font-ja">
                         ニュース
                       </h1>
                     </div>
@@ -110,7 +110,7 @@ export default function NewsList({ articles, totalCount }: Props) {
                     {article.category && idx === 0 && (
                       <div className="post-featured__categories">
                         <span className="tag tag-default tag-outline-permanent tag-link-outline-premanent">
-                          {article.category}
+                          {article.category.name}
                         </span>
                       </div>
                     )}

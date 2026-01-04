@@ -12,6 +12,16 @@ type TagField = {
   tag: string;
 };
 
+// カテゴリ参照フィールドの型
+type CategoryField = {
+  id: string;
+  createdAt: string;
+  updatedAt: string;
+  publishedAt: string;
+  revisedAt: string;
+  name: string;
+};
+
 // ニュース記事の型定義
 export type NewsArticle = {
   id: string;
@@ -26,7 +36,7 @@ export type NewsArticle = {
     height: number;
   };
   content: string;
-  category?: string;
+  category?: CategoryField;  // コンテンツ参照フィールド
   tags?: TagField[];  // 繰り返しフィールド（オブジェクト配列）
   excerpt?: string;
 };

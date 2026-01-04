@@ -191,6 +191,7 @@ html {
   background-image: url('/img/contact/contact-bg.jpg');
 }
 
+
 @media only screen and (max-width: 1199px) {
   .mxd-hero-06 {
     min-height: 100vh;
@@ -231,5 +232,77 @@ html {
 
   .mxd-services-cards-s__image.image-bottom-2 {
     bottom: 10px;
+  }
+
+  .mxd-posts-container {
+    width: 100%;
+  }
+}
+
+
+/* ニュースページ */
+.post-featured {
+  padding: 0
+}
+
+.post-featured .post-featured__categories {
+  margin-top: 3rem;
+  margin-left: 1rem;
+}
+
+.post-featured .post-featured__content {
+  padding: 1rem 1rem 1rem 1rem;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.post-featured .post-featured__meta {
+  margin-bottom: 0;
+}
+
+.post-featured .post-featured__meta .meta-date {
+  font-size: 1.2rem;
+}
+.post-featured .post-featured__meta .post-featured__title {
+  font-size: 1.4rem;  
+  margin-bottom: 0;
+}
+
+
+.post-simple {
+  gap: 2rem;
+}
+
+.post-simple .post-simple__thumb {
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+.post-simple .post-simple__meta .meta-date {
+  font-size: 1.2rem;
+}
+.post-simple .post-simple__title h5 {
+  font-size: 1.4rem;  
+}
+
+@media only screen and (min-width: 1200px) {
+  .post-featured .post-featured__categories {
+    margin-top: 5rem;
+    margin-left: 3rem;
+  }
+  .post-featured .post-featured__content {
+    padding: 2rem;
+    max-width: 1000px;
+  }
+  .post-featured .post-featured__meta .meta-date {
+    font-size: 2rem;
+  }
+  .post-featured .post-featured__meta .post-featured__title {
+    font-size: 2.4rem;  
+  }
+
+  .post-simple .post-simple__meta .meta-date {
+    font-size: 2rem;
+  }
+  .post-simple .post-simple__title h5 {
+    font-size: 2.4rem;  
   }
 }

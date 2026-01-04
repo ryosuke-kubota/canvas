@@ -16,7 +16,7 @@ export default async function NewsPage() {
     <>
       <main
         id="mxd-page-content"
-        className="mxd-page-content inner-page-content"
+        className="mxd-page-content inner-page-content news-page-content"
       >
         <NewsList articles={articles} totalCount={totalCount} />
         <Cta />
