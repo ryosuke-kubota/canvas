@@ -1,10 +1,27 @@
-import { createClient } from "microcms-js-sdk";
+import { createClient, MicroCMSClient } from "microcms-js-sdk";
 
-// microCMSクライアント
-export const client = createClient({
-  serviceDomain: process.env.MICROCMS_SERVICE_DOMAIN || "",
-  apiKey: process.env.MICROCMS_API_KEY || "",
-});
+// microCMSクライアント（遅延初期化）
+let _client: MicroCMSClient | null = null;
+
+function getClient(): MicroCMSClient {
+  if (_client) return _client;
+
+  const serviceDomain = process.env.MICROCMS_SERVICE_DOMAIN;
+  const apiKey = process.env.MICROCMS_API_KEY;
+
+  if (!serviceDomain || !apiKey) {
+    throw new Error(
+      "MICROCMS_SERVICE_DOMAIN and MICROCMS_API_KEY must be set in environment variables"
+    );
+  }
+
+  _client = createClient({
+    serviceDomain,
+    apiKey,
+  });
+
+  return _client;
+}
 
 // 繰り返しフィールドの型
 type TagField = {
@@ -56,7 +73,7 @@ export type NewsListResponse = {
 
 // ニュース一覧を取得
 export async function getNewsList(limit = 10, offset = 0) {
-  const response = await client.get<NewsListResponse>({
+  const response = await getClient().get<NewsListResponse>({
     endpoint: "news",
     queries: { limit, offset },
   });
@@ -65,7 +82,7 @@ export async function getNewsList(limit = 10, offset = 0) {
 
 // ニュース記事を取得
 export async function getNewsDetail(id: string) {
-  const response = await client.get<NewsArticle>({
+  const response = await getClient().get<NewsArticle>({
     endpoint: "news",
     contentId: id,
   });
@@ -74,7 +91,7 @@ export async function getNewsDetail(id: string) {
 
 // すべてのニュースIDを取得（静的生成用）
 export async function getAllNewsIds() {
-  const response = await client.get<NewsListResponse>({
+  const response = await getClient().get<NewsListResponse>({
     endpoint: "news",
     queries: { fields: "id", limit: 100 },
   });
