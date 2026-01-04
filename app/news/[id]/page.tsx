@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export async function generateStaticParams() {
   try {
     const ids = await getAllNewsIds();
-    return ids.map((id) => ({ id }));
+    return ids.map((id: string) => ({ id }));
   } catch {
     return [];
   }
