@@ -13,6 +13,28 @@ export const metadata: Metadata = {
   title: "Canvas - Web3コンサルティング・グローバルマーケティング",
   description:
     "Canvas - Web3コンサルティング・グローバルマーケティング",
+  openGraph: {
+    title: "Canvas - Web3コンサルティング・グローバルマーケティング",
+    description:
+      "Web3への進出を支援するためのコンサルティング・開発・グローバルマーケティングを行なっております。",
+    images: [
+      {
+        url: "https://renew.canva3.jp/img/ogp.png",
+        width: 1200,
+        height: 630,
+        alt: "Canvas",
+      },
+    ],
+    locale: "ja_JP",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Canvas - Web3コンサルティング・グローバルマーケティング",
+    description:
+      "Web3への進出を支援するためのコンサルティング・開発・グローバルマーケティングを行なっております。",
+    images: ["https://renew.canva3.jp/img/ogp.png"],
+  },
 };
 const setColorSchemeScript = `
 (function() {
