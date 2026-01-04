@@ -309,13 +309,34 @@ html {
 
 
 /* ニュース詳細ページ */
+
+.news-detail-page-content .mxd-article__headline {
+  margin-bottom: 6rem;
+}
 .news-detail-page-content h1 {
   font-size: 2rem;
+}
+
+.news-detail-page-content .mxd-article__breadcrumbs {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .news-detail-page-content .mxd-article__breadcrumbs span {
   font-size: 1rem;
   margin-bottom: 1rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.news-detail-page-content .mxd-article__breadcrumbs span.current-item {
+  flex-shrink: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
 }
 
 .news-detail-page-content .tag {
@@ -342,6 +363,9 @@ html {
   .news-detail-page-content .mxd-article__breadcrumbs span {
     font-size: 1.4rem;
     margin-bottom: 1rem;
+  }
+  .news-detail-page-content .mxd-article__breadcrumbs span.current-item {
+    max-width: 400px;
   }
   .news-detail-page-content .tag {
     font-size: 1.6rem;
