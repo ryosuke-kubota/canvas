@@ -35,6 +35,9 @@ export const metadata: Metadata = {
       "Web3への進出を支援するためのコンサルティング・開発・グローバルマーケティングを行なっております。",
     images: ["https://renew.canva3.jp/img/ogp.png"],
   },
+  other: {
+    "theme-color": "#161616",
+  },
 };
 const setColorSchemeScript = `
 (function() {

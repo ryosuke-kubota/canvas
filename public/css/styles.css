@@ -442,6 +442,19 @@ html {
   transform: translateY(-7.6rem);
 }
 
+/* Fix Safari issue with to-top button arrow not showing */
+.btn-to-top {
+  mix-blend-mode: normal;
+  background-color: #161616;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+.btn-to-top i {
+  overflow: visible;
+  color: #fff;
+}
+
 @media only screen and (min-width: 1600px) {
   .stack-wrapper.in-content-stack {
     transform: translateY(-4.6rem);
