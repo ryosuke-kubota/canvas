@@ -220,7 +220,7 @@ html {
   }
 
   .padding-pre-title {
-   height: 2500px;
+   height: 2380px;
   }
   .services-stack {
     min-height: unset;
@@ -229,7 +229,7 @@ html {
     margin-bottom: 1.6rem !important;
   }
   .services-stack .mxd-services-stack__title h3 {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
   }
   .services-stack .mxd-services-stack__info {
     margin-bottom: 1.6rem !important;
@@ -251,11 +251,17 @@ html {
     margin-top: 2rem;
   }
   .services-stack .services-stack-3 .services-stack__image {
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
+    position: absolute;
+    bottom: 10%;
+    left: 20%;
   }
   .services-stack .services-stack-4 .services-stack__image {
-    margin-top: 0rem;
-    left: 40%;
+    /* margin-top: 0rem;
+    left: 40%; */
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
   }
   .services-stack .services-stack-5 .services-stack__image {
     display: none;

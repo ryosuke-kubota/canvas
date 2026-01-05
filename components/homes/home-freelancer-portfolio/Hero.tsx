@@ -17,6 +17,7 @@ export default function Hero() {
                   autoPlay
                   loop
                   muted
+                  playsInline
                   poster="video/hero/hero.png"
                 >
                   <source type="video/mp4" src="video/hero/hero.mp4" />

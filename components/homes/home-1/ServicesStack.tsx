@@ -103,7 +103,7 @@ export default function ServicesStack() {
                   <Image
                     className="service-img service-img-s"
                     alt="Service/Feature Image"
-                    src="/img/marketing-support/x.jpg"
+                    src="/img/marketing-support/x-mobile.png"
                     width={800}
                     height={800}
                   />
@@ -147,7 +147,7 @@ export default function ServicesStack() {
                   <Image
                     className="service-img service-img-s"
                     alt="Service/Feature Image"
-                    src="/img/marketing-support/discord.jpg"
+                    src="/img/marketing-support/discord-mobile.png"
                     width={800}
                     height={800}
                   />
