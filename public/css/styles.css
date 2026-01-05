@@ -270,11 +270,13 @@ html {
 
 @media only screen and (min-width: 1200px) {
   .mxd-services-stack__title h3 {
-    font-size: 4rem;
+    font-size: 3.8rem;
+    -webkit-text-size-adjust: 100%;
   }
   .mxd-services-stack__info p,
   .mxd-services-stack__info ul li {
-    font-size: 1.8rem;
+    font-size: 15px;
+    -webkit-text-size-adjust: 100%;
   }
 
   .mxd-services-cards-s__image.image-top-right {
