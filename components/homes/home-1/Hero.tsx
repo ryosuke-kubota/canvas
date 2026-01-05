@@ -236,6 +236,7 @@ export default function Hero() {
                   autoPlay
                   loop
                   muted
+                  playsInline
                   poster="video/540x310_video-01.webp"
                 >
                   <source type="video/mp4" src="video/540x310_video-01.mp4" />

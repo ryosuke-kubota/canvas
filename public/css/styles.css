@@ -422,3 +422,15 @@ html {
     font-size: 2rem;
   }
 }
+
+/* Fix ScrollTrigger position calculation - use transform instead of margin */
+.stack-wrapper.in-content-stack {
+  margin-top: 0 !important;
+  transform: translateY(-7.6rem);
+}
+
+@media only screen and (min-width: 1600px) {
+  .stack-wrapper.in-content-stack {
+    transform: translateY(-4.6rem);
+  }
+}

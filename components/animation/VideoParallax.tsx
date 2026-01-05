@@ -52,6 +52,7 @@ const VideoParallax = ({
       autoPlay
       loop
       muted
+      playsInline
       src={src}
       poster={poster}
       ref={elRef}

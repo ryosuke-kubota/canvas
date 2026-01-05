@@ -95,7 +95,7 @@ export default function StackCards({
         scrub,
         animation: tl!,
         invalidateOnRefresh: true,
-        // markers: true,
+        markers: true,
       });
     };
 
