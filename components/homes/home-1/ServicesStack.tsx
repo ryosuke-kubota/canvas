@@ -15,7 +15,7 @@ export default function ServicesStack() {
             <StackCards className="stack-wrapper in-content-stack">
               {/* services stack single item */}
 
-              <div className="mxd-services-stack__inner justify-start bg-base-opp">
+              <div className="mxd-services-stack__inner justify-start bg-base-opp services-stack-1">
                 <div className="mxd-services-stack__title width-60">
                   <h3 className="opposite font-ja">戦略アドバイザリー</h3>
                 </div>
@@ -45,7 +45,7 @@ export default function ServicesStack() {
 
               {/* services stack single item */}
 
-              <div className="mxd-services-stack__inner justify-start bg-accent">
+              <div className="mxd-services-stack__inner justify-start bg-accent services-stack-2">
                 <div className="mxd-services-stack__title width-60">
                   <h3 className="opposite">
                     KOL, 
@@ -77,7 +77,7 @@ export default function ServicesStack() {
 
               {/* services stack single item */}
 
-              <div className="mxd-services-stack__inner radius-dark justify-start bg-base-tint">
+              <div className="mxd-services-stack__inner radius-dark justify-start bg-base-tint services-stack-3">
                 <div className="mxd-services-stack__title width-60">
                   <h3>
                     X<span className="font-ja">(ツイッター)サービス</span>
@@ -119,7 +119,7 @@ export default function ServicesStack() {
 
               {/* services stack single item */}
 
-              <div className="mxd-services-stack__inner justify-start bg-additional">
+              <div className="mxd-services-stack__inner justify-start bg-additional services-stack-4">
                 <div className="mxd-services-stack__title width-60">
                   <h3 className="">
                     Discord<span className="font-ja">サービス</span>
@@ -163,7 +163,7 @@ export default function ServicesStack() {
 
               {/* services stack single item */}
 
-              <div className="mxd-services-stack__inner justify-start bg-base-opp">
+              <div className="mxd-services-stack__inner justify-start bg-base-opp services-stack-5">
                 <div className="mxd-services-stack__title width-60">
                   <h3 className="opposite">
                     世界中の企業/ブランドとの連携

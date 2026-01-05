@@ -214,6 +214,45 @@ html {
     left: 50%;
     transform: translate(-50%);
   }
+
+  .services-stack {
+    min-height: unset;
+  }
+  .services-stack .mxd-services-stack__title {
+    margin-bottom: 1.6rem !important;
+  }
+  .services-stack .mxd-services-stack__title h3 {
+    font-size: 1.4rem;
+  }
+  .services-stack .mxd-services-stack__info {
+    margin-bottom: 1.6rem !important;
+  }
+  .mxd-services-stack__info p,
+  .mxd-services-stack__info ul li {
+    font-size: 1.1rem;
+  }
+
+  .services-stack .services-stack-1 .services-stack__image {
+    margin-top: 5rem;
+  }
+  .services-stack .services-stack-2 .services-stack__image {
+    margin-top: 5rem;
+    left: -3rem;
+    width: 120%;
+  }
+  .services-stack .services-stack-3 .services-stack__image {
+    margin-top: 2rem;
+  }
+  .services-stack .services-stack-3 .services-stack__image {
+    margin-top: 2rem;
+  }
+  .services-stack .services-stack-4 .services-stack__image {
+    margin-top: 0rem;
+    left: 40%;
+  }
+  .services-stack .services-stack-5 .services-stack__image {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
