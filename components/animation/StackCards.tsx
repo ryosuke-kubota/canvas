@@ -63,9 +63,12 @@ export default function StackCards({
       gsap.set(items, { clearProps: "transform" });
 
       // measure AFTER clearing transforms
+      // Use scrollHeight to get the full content height (including overflow)
       const first = items[0];
-      const cardHeight =
-        first.getBoundingClientRect().height || first.offsetHeight;
+      const firstChild = first.firstElementChild as HTMLElement | null;
+      const cardHeight = firstChild
+        ? Math.max(first.scrollHeight, firstChild.scrollHeight, first.offsetHeight)
+        : first.scrollHeight || first.offsetHeight;
 
       tl = gsap.timeline({ defaults: { ease: "none" } });
 
