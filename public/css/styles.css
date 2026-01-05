@@ -77,6 +77,10 @@ html {
   padding-top: 0px;
 }
 
+.marquee.permanent-desktop .marquee__text {
+  font-weight: 900;
+}
+
 /* Locks page scroll while modal is open */
 .videoModal__bodyOpen {
   overflow: hidden;
