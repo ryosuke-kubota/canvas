@@ -3,6 +3,8 @@ name: Deploy Next.js to Onamae Server
 on:
   push:
     branches: [ "main" ]  # main ブランチに push されたらデプロイ
+  repository_dispatch:
+    types: [ microcms-webhook ]  # microCMS Webhook からのトリガー
 
 jobs:
   deploy:
