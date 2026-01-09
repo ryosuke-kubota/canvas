@@ -17,7 +17,7 @@ function formatDate(dateString: string) {
 
 export default function NewsDetail({ article }: Props) {
   return (
-    <div className="mxd-section padding-pre-title">
+    <div className="mxd-section">
       <div className="mxd-container grid-container">
         <div className="mxd-article-area loading-wrap">
           {/* Article Container Start */}
