@@ -18,7 +18,7 @@ export default function NewsPreview({
   desc = defaultDesc,
 }: Props) {
   return (
-    <div className="mxd-section padding-blog">
+    <div id="news" className="mxd-section padding-blog">
       <div className="mxd-container grid-container">
         {/* Block - Section Title Start */}
         <div className="mxd-block">

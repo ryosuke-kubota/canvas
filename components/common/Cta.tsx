@@ -6,7 +6,7 @@ import AnimatedButton from "../animation/AnimatedButton";
 
 export default function Cta() {
   return (
-    <div className="mxd-section overflow-hidden">
+    <div id="contact" className="mxd-section overflow-hidden">
       <div className="mxd-container">
         {/* Block - CTA Start */}
         <div className="mxd-block">

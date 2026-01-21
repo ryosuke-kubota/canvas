@@ -9,7 +9,7 @@ const teamMembers = teamData;
 
 export default function Team() {
   return (
-    <div className="mxd-section padding-pre-grid">
+    <div id="team" className="mxd-section padding-pre-grid">
       <div className="mxd-container grid-container">
         {/* Block - Team Leaders Start */}
         <div className="mxd-block">

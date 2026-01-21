@@ -41,7 +41,7 @@ export default function ContactPage() {
                       key={idx}
                       className="marquee__item one-line item-regular text"
                     >
-                      <p className="marquee__text">Connect</p>
+                      <p className="marquee__text">Canvas</p>
                       <div className="marquee__image">
                         <svg
                           version="1.1"

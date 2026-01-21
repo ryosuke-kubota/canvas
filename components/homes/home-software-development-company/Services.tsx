@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Services() {
   return (
-    <div className="mxd-section overflow-hidden padding-pre-title">
+    <div id="services" className="mxd-section overflow-hidden padding-pre-title">
       <div className="mxd-container grid-container">
         {/* Block - Section Title Start */}
         <div className="mxd-block">

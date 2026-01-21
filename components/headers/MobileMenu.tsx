@@ -59,6 +59,13 @@ export default function MobileMenu() {
   const isMenuActive = (link?: string) =>
     link?.split("/")[1] == pathname.split("/")[1];
 
+  // Close menu when a link is clicked
+  const handleLinkClick = () => {
+    if (isActive) {
+      handleToggle();
+    }
+  };
+
   useEffect(() => {
     // Get scrollHeight for each submenu and store in state
     const heights = submenuRefs.current.map((submenu) =>
@@ -194,7 +201,7 @@ export default function MobileMenu() {
                                     isMenuActive(sub.href) ? "active" : ""
                                   }`}
                                 >
-                                  <Link href={sub.href}>{sub.label}</Link>
+                                  <Link href={sub.href} onClick={handleLinkClick}>{sub.label}</Link>
                                 </li>
                               ))}
                             </ul>
@@ -206,6 +213,7 @@ export default function MobileMenu() {
                                 text={item.title}
                                 className="main-menu__link btn btn-anim font-ja"
                                 href={item.href}
+                                onClick={handleLinkClick}
                               ></AnimatedButton>
                             ) : (
                               ""

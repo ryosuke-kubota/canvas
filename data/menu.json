@@ -5,26 +5,26 @@
   },
   {
     "title": "ニュース",
-    "href": "#news"
+    "href": "/#news"
   },
   {
     "title": "私たちについて",
-    "href": "#about"
+    "href": "/#about"
   },
   {
     "title": "サービス",
-    "href": "#services"
+    "href": "/#services"
   },
   {
     "title": "マーケティングサポート",
-    "href": "#marketing-support"
+    "href": "/#marketing-support"
   },
   {
     "title": "チーム",
-    "href": "#team"
+    "href": "/#team"
   },
   {
     "title": "お問い合わせ",
-    "href": "#contact"
+    "href": "/#contact"
   }
 ]

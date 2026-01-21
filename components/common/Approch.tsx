@@ -6,7 +6,7 @@ import RevealText from "../animation/RevealText";
 import AnimatedButton from "../animation/AnimatedButton";
 export default function Approch() {
   return (
-    <div className="mxd-section padding-pre-grid mobile-grid-s">
+    <div id="about" className="mxd-section padding-pre-grid mobile-grid-s">
       <div className="mxd-container grid-container">
         {/* Block - Section Title Start */}
         <div className="mxd-block">
