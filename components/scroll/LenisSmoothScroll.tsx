@@ -1,10 +1,31 @@
 "use client";
 import ReactLenis, { useLenis } from "lenis/react";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function LenisSmoothScroll() {
   const lenis = useLenis();
+  const pathname = usePathname();
+  const isFirstRender = useRef(true);
+
+  // ページ遷移時にスクロール位置をトップにリセット
+  useEffect(() => {
+    if (!lenis) return;
+
+    // 初回レンダリング時はスキップ
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
+
+    // アンカーリンク（#付き）の場合はスクロールしない
+    if (window.location.hash) {
+      return;
+    }
+
+    lenis.scrollTo(0, { immediate: true });
+  }, [pathname, lenis]);
 
   useEffect(() => {
     if (!lenis) return;
