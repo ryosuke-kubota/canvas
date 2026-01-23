@@ -28,6 +28,21 @@ export default function ClientLayout({ children }: ClientLayoutProps) {
     if (window.location.hash) {
       return;
     }
+
+    // sessionStorageにスクロール先のセクションがある場合
+    const scrollToSection = sessionStorage.getItem("scrollToSection");
+    if (scrollToSection) {
+      sessionStorage.removeItem("scrollToSection");
+      // 少し遅延させてDOMが準備されてからスクロール
+      setTimeout(() => {
+        const element = document.getElementById(scrollToSection);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+      return;
+    }
+
     window.scrollTo(0, 0);
   }, [pathname]);
 

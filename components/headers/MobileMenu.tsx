@@ -60,7 +60,26 @@ export default function MobileMenu() {
     link?.split("/")[1] == pathname.split("/")[1];
 
   // Close menu when a link is clicked
-  const handleLinkClick = () => {
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    // ハッシュリンクの場合、URLからハッシュを削除
+    if (href.includes("#")) {
+      e.preventDefault();
+      const [path, hash] = href.split("#");
+      const targetPath = path || "/";
+
+      // 同じページの場合はスクロールのみ
+      if (pathname === targetPath || (pathname === "/" && targetPath === "/")) {
+        const element = document.getElementById(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      } else {
+        // 別ページの場合は遷移してからスクロール
+        window.location.href = targetPath;
+        sessionStorage.setItem("scrollToSection", hash);
+      }
+    }
+
     if (isActive) {
       handleToggle();
     }
@@ -201,7 +220,7 @@ export default function MobileMenu() {
                                     isMenuActive(sub.href) ? "active" : ""
                                   }`}
                                 >
-                                  <Link href={sub.href} onClick={handleLinkClick}>{sub.label}</Link>
+                                  <Link href={sub.href} onClick={(e) => handleLinkClick(e, sub.href)}>{sub.label}</Link>
                                 </li>
                               ))}
                             </ul>
@@ -213,7 +232,7 @@ export default function MobileMenu() {
                                 text={item.title}
                                 className="main-menu__link btn btn-anim font-ja"
                                 href={item.href}
-                                onClick={handleLinkClick}
+                                onClick={(e: React.MouseEvent<HTMLAnchorElement>) => handleLinkClick(e, item.href)}
                               ></AnimatedButton>
                             ) : (
                               ""
