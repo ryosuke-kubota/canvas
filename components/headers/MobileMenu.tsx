@@ -232,7 +232,7 @@ export default function MobileMenu() {
                                 text={item.title}
                                 className="main-menu__link btn btn-anim font-ja"
                                 href={item.href}
-                                onClick={(e: React.MouseEvent<HTMLAnchorElement>) => handleLinkClick(e, item.href)}
+                                onClick={(e: React.MouseEvent<HTMLElement>) => handleLinkClick(e as React.MouseEvent<HTMLAnchorElement>, item.href)}
                               ></AnimatedButton>
                             ) : (
                               ""
