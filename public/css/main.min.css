@@ -17028,9 +17028,15 @@ form textarea:required:valid {
 .mxd-services-cards-s__title h3 {
   font-size: 3.6rem;
 }
+.mxd-services-cards-s__info p {
+  font-size: 1.6rem;
+}
 @media only screen and (min-width: 992px) {
   .mxd-services-cards-s__title {
     width: 50%;
+  }
+  .mxd-services-cards-s__info p {
+    font-size: 1.6rem;
   }
 }
 @media only screen and (min-width: 1200px) {
