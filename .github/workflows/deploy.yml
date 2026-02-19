@@ -33,7 +33,7 @@ jobs:
         with:
           switches: -avz --delete
           path: out/
-          remote_path: public_html/renew.canva3.jp
+          remote_path: public_html/canva3.jp
           remote_host: ${{ secrets.WEB_SERVER }}
           remote_user: ${{ secrets.SSH_USER }}
           remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
